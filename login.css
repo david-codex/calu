@@ -1,0 +1,333 @@
+body {
+    background: #35aac7cf;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #72dcf4b6, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', sans-serif; /* Aplicando Montserrat a todo el cuerpo */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+h1 {
+    
+    font-size: 48px; /* Tamaño del título */
+    color: #FF6F61; /* Color coral */
+    text-align: center; /* Alineación del texto */
+    margin: 20px; /* Margen alrededor del título */
+    line-height: 1.2; /* Espacio entre líneas */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras para mayor impacto */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; /* Sombra de texto para simular el borde negro */
+}
+
+
+.imagen-izquierda,
+.imagen-derecha {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la relación de aspecto */
+    border: 3px solid black; /* Borde negro */
+    border-radius: 20%; /* Bordes circulares */
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px; /* Tamaño del título más pequeño en móvil */
+    }
+
+    .header {
+        padding: 10px; /* Reduce el padding en móvil */
+    }
+
+    .imagen-izquierda,
+    .imagen-derecha {
+        width: 90%; /* Aumenta el tamaño en móviles */
+    }
+}
+
+
+
+.tramites {
+    margin: 20px auto; /* Centrar horizontalmente y mantener margen vertical */
+    padding: 10px;
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 15px; /* Bordes circulares */
+    background-color: #e0f7fa; /* Cambia el color de fondo */
+    max-width: 1400px; /* Ajusta el ancho máximo del contenedor */
+}
+
+
+.tramites h2 {
+    font-size: 1.6em; /* Tamaño de fuente para el título (más pequeño) */
+    margin-bottom: 10px;
+    color: #1a1a1a; /* Color oscuro */
+}
+
+.tramites ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Reducir padding */
+}
+
+.tramites li {
+    font-size: 1.6em; /* Tamaño de fuente para los elementos de la lista (más pequeño) */
+    margin: 10px 0; /* Aumentar margen superior e inferior para más espacio */
+    color: #333; /* Color oscuro para el texto de la lista */
+}
+
+.icon {
+    width: 40px; /* Aumentar el tamaño del icono */
+    height: auto; /* Mantiene la proporción */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 10px; /* Aumentar el espacio entre el icono y el texto */
+}
+
+
+.contenido {
+    display: flex; /* Usar flexbox para alinear los elementos */
+}
+
+.tramites ul {
+    flex: 3; /* Toma el espacio restante */
+}
+
+.imagenes-derecha {
+    margin-left: 20px; /* Espacio entre la lista y las imágenes */
+}
+
+.imagen-principal {
+    width: 100%; /* Ajusta el tamaño según lo necesites */
+    max-width: 300px; /* Máximo tamaño para la imagen principal */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.imagenes-secundarias {
+    display: flex; /* Alinear las imágenes secundarias en fila */
+    margin-top: 30px; /* Espacio entre la imagen principal y las secundarias */
+}
+
+.imagen-secundaria {
+    width: 200px; /* Tamaño aumentado para las imágenes secundarias */
+    height: auto; /* Mantiene la proporción */
+    margin-right: 10px; /* Espacio entre las imágenes secundarias */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Para eliminar el espacio extra entre las imágenes */
+.imagenes-secundarias img {
+    margin: 0; /* Elimina todo el margen para evitar espacio adicional */
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .tramites {
+        padding: 5px; /* Reduce el padding en móviles */
+        max-width: 95%; /* Aumenta el ancho máximo para móviles */
+    }
+
+    .tramites h2 {
+        font-size: 0.9em; /* Tamaño más pequeño para el título */
+    }
+
+    .tramites li {
+        font-size: 0.7em; /* Tamaño más pequeño para los elementos de la lista */
+    }
+
+    .icon {
+        width: 12px; /* Ajusta el tamaño del icono en móvil */
+    }
+
+    /* Ajuste para las imágenes */
+    .tramites img {
+        max-width: 20%; /* Reduce aún más el ancho máximo de las imágenes */
+        height: auto; /* Mantiene la proporción */
+        display: block; /* Asegura que no haya espacios adicionales debajo */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    .contenido {
+        flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    }
+
+    .tramites ul {
+        flex: none; /* Quita la flexibilidad en móviles */
+        padding-left: 0; /* Elimina padding en móviles */
+    }
+
+    .imagen-principal {
+        max-width: 40%; /* Tamaño ajustado en móviles */
+    }
+
+    .imagen-secundaria {
+        max-width: 10px; /* Reduce aún más el tamaño de las imágenes secundarias */
+        margin-bottom: 5px; /* Espacio entre las imágenes secundarias */
+    }
+}
+
+
+
+
+.FOTOS {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #e0f7fa;
+    max-width: 1400px;
+    display: flex; /* Usar flexbox */
+    justify-content: space-around; /* Espaciado entre los elementos */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.imagen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centrar el texto */
+}
+
+.img-grande {
+    width: 250px; /* Ajustar el tamaño de la imagen grande */
+}
+
+.img-mediano {
+    width: 200px; /* Ajustar el tamaño de la imagen mediana */
+}
+
+.img-pequeño {
+    width: 150px; /* Ajustar el tamaño de la imagen pequeña */
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .FOTOS {
+        padding: 5px; /* Reduce el padding en móviles */
+        display: flex; /* Usar flexbox */
+        flex-direction: column; /* Colocar en columna */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .img-grande {
+        width: 100%; /* Ajustar aún más el tamaño en móviles */
+        margin-bottom: 10px; /* Espacio entre las imágenes */
+    }
+
+    .img-mediano {
+        width: 90%; /* Ajustar el tamaño en móviles */
+        margin-bottom: 10px; /* Espacio entre las imágenes */
+    }
+
+    .img-pequeño {
+        width: 80%; /* Ajustar el tamaño en móviles */
+        margin-bottom: 10px; /* Espacio entre las imágenes */
+    }
+}
+
+
+
+
+
+.procedimiento {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #e0f7fa;
+    max-width: 1400px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.video-container {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    background-color: #e3f2fd; /* Color azul claro */
+    padding: -50px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio desde las imágenes */
+    border: 2px solid #000; /* Bordes del cuadro del video */
+}
+
+.image-container {
+    display: flex; /* Mantener las imágenes en línea */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px; /* Espacio encima de las imágenes */
+}
+
+.imgD {
+    max-width: 15%; /* Imágenes más pequeñas */
+    height: auto; /* Mantener la relación de aspecto */
+    margin: 0 5px; /* Espacio entre las imágenes */
+}
+
+.imgD-large {
+    max-width: 45%; /* Imagen más grande */
+    height: auto; /* Mantener la relación de aspecto */
+    margin: 0 10px; /* Más espacio a los lados */
+}
+
+.procedimiento h2 {
+    margin-bottom: 10px; 
+}
+
+/* Línea de separación */
+.separator {
+    width: 100%;
+    height: 2px; /* Altura de la línea */
+    background-color: #000; /* Color de la línea */
+    margin: 20px 0; /* Espacio vertical alrededor de la línea */
+}
+
+
+
+
+
+.REVELADOS {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #f0f4c3; /* Color de fondo más claro */
+    max-width: 1400px;
+    text-align: center; /* Centrar todo el texto */
+}
+
+h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.subtitulos h3 {
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+    font-weight: normal; /* Normalizar el peso de la fuente */
+}
+
+.imagenes {
+    display: flex; /* Usar flexbox para las imágenes */
+    flex-wrap: wrap; /* Permitir que se ajusten en múltiples filas */
+    justify-content: center; /* Centrar imágenes */
+}
+
+.imagen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Espaciado entre imágenes */
+}
+
+.img {
+    width: 150px; /* Ajustar el tamaño de las imágenes */
+    height: auto; /* Mantener la proporción */
+}
+
+p {
+    margin-top: 5px; /* Espacio entre la imagen y el texto */
+}
